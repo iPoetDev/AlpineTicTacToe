@@ -96,3 +96,11 @@ function app() {
 
     }
 }
+
+
+/**
+ * Represents a game app and assigned to the window object to make globally accessible.
+ * @name app
+ * @returns {Object} An object with methods and properties for the app.
+ */
+window.app = app;  // Make the app function globally accessible
