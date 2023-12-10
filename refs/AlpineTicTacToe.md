@@ -1,4 +1,4 @@
-Source: 
+Source:
 ```cardlink
 url: https://codepen.io/ScottWindon/pen/eYBMXQO
 title: "AlpineJS Tic Tac Toe"
@@ -19,7 +19,7 @@ image: https://shots.codepen.io/username/pen/eYBMXQO-800.jpg?version=1639723366
 		- https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap
 ## Index.html
 
-### HTML: 
+### HTML:
 
 ```html
 <div class="min-w-screen min-h-screen bg-gray-800 flex items-center justify-center px-5 py-5">
@@ -88,37 +88,37 @@ image: https://shots.codepen.io/username/pen/eYBMXQO-800.jpg?version=1639723366
 ```
 
 - Outer Container: DIV (Page/App)
-	- *Screen / Responsiveness*: `min-w-screen min-h-screen`: 
+	- *Screen / Responsiveness*: `min-w-screen min-h-screen`:
 	- *Background Appearance*: `bg-gray-800`
 	- *Flex & Central Position*: `flex items-center justify-center`
 	- *Padding*: `px-5 py-5`
-- Container: 
+- Container:
 	- *Grid Height*: `w-96 h-96`
 	- *Margin X*: `mx-auto `
 	- *Text*: `text-indigo-500`
 	- *Flex*: `flex flex-wrap`
 	- *Rounded-MD*: `rounded-md`
 	- *Positioning*: `relative`
-- Inner Container: 
+- Inner Container:
 	- *Flex*: `flex`
 	- *Dimensions*: `w-full h-1/3`
 ### Template
 #### Grid 0,3
 ```html
-<template 
+<template
 		x-for="(item,index) in grid.slice(0,3)">
-	<div class="border-b border-gray-700 w-1/3" 
+	<div class="border-b border-gray-700 w-1/3"
 		:class="{'border-l':index>0}">
-		<button 
-			class="w-full h-full outline-none focus:outline-none text-8xl leading-none" 
+		<button
+			class="w-full h-full outline-none focus:outline-none text-8xl leading-none"
 			@click.prevent="select(index)">
-			<span 
-				x-show="item!==null" 
-				x-text="item" 
-				style="display:none;" 
-				class="inline-block" 
-				x-transition:enter="transition ease-out duration-300" 
-				x-transition:enter-start="opacity-0 transform scale-50" 
+			<span
+				x-show="item!==null"
+				x-text="item"
+				style="display:none;"
+				class="inline-block"
+				x-transition:enter="transition ease-out duration-300"
+				x-transition:enter-start="opacity-0 transform scale-50"
 				x-transition:enter-end="opacity-100 transform scale-100">
 			</span>
 		</button>
@@ -127,7 +127,7 @@ image: https://shots.codepen.io/username/pen/eYBMXQO-800.jpg?version=1639723366
 ```
 
 - Template runs an x-for loop, for each item, per index, in an array grid.slice from 0 to 3
-	- For each loop, create a cell (div) 
+	- For each loop, create a cell (div)
 		- with border bottom, grey 700 at width of 1/3 of containing container
 		- Border is width 1 when Index is greater than 1
 	- In each loop, creates a button
@@ -151,19 +151,19 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 - Template runs an x-for loop, for each item, per index, in an array grid.slice from 0 to 3
 	- For in each loop, as a sub element of a button per grid cell
 		- Span
-			- x-show: item is not null i.e. must be full or not empty when 
+			- x-show: item is not null i.e. must be full or not empty when
 				- X-show an expressive way to show and hide DOM elements.
 				- "default" state of an `x-show` on page load is "false",
-				- Used with transitions: 
+				- Used with transitions:
 					- to apply smooth transitions to the `x-show` behaviour,
 			- x-text: item
 			-[ x-transition](https://alpinejs.dev/directives/transition)
 						- `x-tranisition:enter`: Applied during the entire entering phase.
 						- `x-tranisition:enter-start`: Added before element is inserted, removed one frame after element is inserted.
-							- Opacity is zero at start of transform 
+							- Opacity is zero at start of transform
 							- Scale from 50% at start of transform
 						- `x-tranisition:enter-end`: Added one frame after element is inserted (at the same time `enter-start` is removed), removed when transition/animation finishes.
-							- Opacity is 100 at start of transform 
+							- Opacity is 100 at start of transform
 							- Scale from 100% at start of transform
 			-  **Style**: `display:none`
 			-  **Class**: `inline-block`
@@ -178,7 +178,7 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 		- :class sets the "border-l" CSS class if the index is greater than 0.
 		- border-1: The key ('border-l') is the CSS class,
 		- Index>0: Value (index>0) is the condition to apply this class
-			-  If index is greater than 0, then the border-l class will be added to the div element 
+			-  If index is greater than 0, then the border-l class will be added to the div element
 			- in addition to the fixed classes border-b border-gray-700 and w-1/3.
 		- So, the div element will have the "border-l" class if the index value is greater than 0, and won't have the "border-l" class if the index value is not greater than 0.
 - **Button**:
@@ -191,22 +191,22 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 	- x-text: `"item"` text content of an element to the result of a given expression.
 		- `item` is a variable name
 		- Like a variable value and assigned to the span's inner html
-	- 
+	-
 #### Grid 3,6
 ```html
 
-<template 
+<template
 		x-for="(item,index) in grid.slice(3,6)">
-	<div class="border-b border-gray-700 w-1/3" 
+	<div class="border-b border-gray-700 w-1/3"
 		:class="{'border-l':index>0}">
-		<button 
+		<button
 			class="w-full h-full outline-none focus:outline-none text-8xl leading-none" @click.prevent="select(index+3)">
-			<span x-show="item!==null" 
-				x-text="item" 
-				style="display:none;" 
-				class="inline-block" 
-				x-transition:enter="transition ease-out duration-300" 
-				x-transition:enter-start="opacity-0 transform scale-50" 
+			<span x-show="item!==null"
+				x-text="item"
+				style="display:none;"
+				class="inline-block"
+				x-transition:enter="transition ease-out duration-300"
+				x-transition:enter-start="opacity-0 transform scale-50"
 				x-transition:enter-end="opacity-100 transform scale-100">
 			</span>
 		</button>
@@ -215,18 +215,18 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 ```
 #### Grid 6,9
 ```html
-<template 
+<template
 		x-for="(item,index) in grid.slice(6,9)">
-	<div class="border-gray-700 w-1/3" 
+	<div class="border-gray-700 w-1/3"
 		:class="{'border-l':index>0}">
-		<button class="w-full h-full outline-none focus:outline-none text-8xl leading-none" 
+		<button class="w-full h-full outline-none focus:outline-none text-8xl leading-none"
 			@click.prevent="select(index+6)">
-			<span x-show="item!==null" 
-				x-text="item" 
-				style="display:none;" 
-				class="inline-block" 
-				x-transition:enter="transition ease-out duration-300" 
-				x-transition:enter-start="opacity-0 transform scale-50" 
+			<span x-show="item!==null"
+				x-text="item"
+				style="display:none;"
+				class="inline-block"
+				x-transition:enter="transition ease-out duration-300"
+				x-transition:enter-start="opacity-0 transform scale-50"
 				x-transition:enter-end="opacity-100 transform scale-100">
 			</span>
 		</button>
@@ -235,16 +235,16 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 ```
 ### Button
 ```html
-<button 
-	class="absolute top-0 left-0 w-96 h-96 flex items-center justify-center outline-none focus:outline-none" 
-	style="display:none;" 
-	x-show="won||turns>=9" 
-	x-transition:enter="transition ease-out duration-300" 
-	x-transition:enter-start="opacity-0 transform scale-50 rotate-12" 
-	x-transition:enter-end="opacity-100 transform scale-100 rotate-0" 
+<button
+	class="absolute top-0 left-0 w-96 h-96 flex items-center justify-center outline-none focus:outline-none"
+	style="display:none;"
+	x-show="won||turns>=9"
+	x-transition:enter="transition ease-out duration-300"
+	x-transition:enter-start="opacity-0 transform scale-50 rotate-12"
+	x-transition:enter-end="opacity-100 transform scale-100 rotate-0"
 	@click.prevent="reset()">
-	<span 
-		class="block transform -rotate-12 text-white text-9xl text-glow-xl" 
+	<span
+		class="block transform -rotate-12 text-white text-9xl text-glow-xl"
 		x-text="won?'Winner!':'😔'"></span>
 </button>
 ```

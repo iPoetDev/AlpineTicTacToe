@@ -5,12 +5,12 @@ module.exports = {
     extends: ['standard', 'prettier'],
     rules: {
         'vue/html-self-closing': [
-            'error',
+            'warn',
             {
                 html: {
                     void: 'never',
-                    normal: 'always',
-                    component: 'always',
+                    normal: 'any',
+                    component: 'any',
                 },
                 svg: 'always',
                 math: 'always',

@@ -4,7 +4,7 @@
  * @name app
  * @returns {Object} An object with methods and properties for the app.
  */
-function app() {
+export function app() {
     return {
         turns: 0,
         won: false,
@@ -103,4 +103,4 @@ function app() {
  * @name app
  * @returns {Object} An object with methods and properties for the app.
  */
-window.app = app;  // Make the app function globally accessible
+window.game = app;  // Make the app function globally accessible

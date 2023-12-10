@@ -7,7 +7,7 @@
 
 ##### Template
 
-- URL: 
+- URL:
 ```cardlink
 url: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
 title: "<template>: The Content Template element - HTML: HyperText Markup Language | MDN"
@@ -17,10 +17,10 @@ favicon: https://developer.mozilla.org/favicon-48x48.cbbd161b.png
 image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 ```
 
-- **`<template>`** [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) element 
+- **`<template>`** [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) element
 	- Is a mechanism for holding [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML) that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
 	- Is a content fragment that is being stored for subsequent use in the document.
-		- The parser does process the contents of the **`<template>`** element while loading the page, 
+		- The parser does process the contents of the **`<template>`** element while loading the page,
 		- The parser does so only to ensure that those contents are valid;
 		- The element's contents are not rendered by the browser, however.
 	- The [global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) are supported.
@@ -44,8 +44,8 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 | Technology | Version | Site | Docs |
 |:-----------|:--------|:-----|:-----|
 | ECMAScript            | ECMA-262 (13th Edition) | https://ecma-international.org/ |      |
-| JSDoc           | 4.0.2        | https://jsdoc.app/ |      |  
-| AlpineJS           | 3.1.3        |      |      |  
+| JSDoc           | 4.0.2        | https://jsdoc.app/ |      |
+| AlpineJS           | 3.1.3        |      |      |
 
 #### Native JavaScript
 
@@ -61,15 +61,15 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 ### Head
 
 ```html
-<title>Tic Tac Toe : AlpineJS by Scott Windon </title>  
-<meta charset="UTF-8"> <!-- Character Encoding -->  
-<!-- Required Meta Tags -->  
-<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive Design -->  
-<!-- Recommended Meta Tags -->  
-<meta name="description" content="Example AlpineJS Tic Tac Toe: Scott Windon"> <!-- SEO Meta Description -->  
-<meta name="keywords" content="your, tags"> <!-- SEO Keywords -->  
-<meta name="author" content="author name"> <!-- Author Information -->  
-<!-- Links to CSS -->  
+<title>Tic Tac Toe : AlpineJS by Scott Windon </title>
+<meta charset="UTF-8"> <!-- Character Encoding -->
+<!-- Required Meta Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive Design -->
+<!-- Recommended Meta Tags -->
+<meta name="description" content="Example AlpineJS Tic Tac Toe: Scott Windon"> <!-- SEO Meta Description -->
+<meta name="keywords" content="your, tags"> <!-- SEO Keywords -->
+<meta name="author" content="author name"> <!-- Author Information -->
+<!-- Links to CSS -->
 <link rel="stylesheet" href="src/assets/css/style.css">
 ```
 
@@ -94,10 +94,10 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 - **description**:
 - **keywords**:
 - **author**:
-#### Link 
+#### Link
 
 - `Style.css`
-	- Purpose: Local custom code for 
+	- Purpose: Local custom code for
 		- Importing Fonts
 		- Loading Fonts
 		- Non TailwindCSS
@@ -125,7 +125,7 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 
 ##### Component: Template Grid
 
-- 
+-
 
 #### Semantics: Responsiveness
 
@@ -155,7 +155,7 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 | Script | defer, script | External, CDN      | <div style="color: rgb(223, 225, 243);"><pre style="font-family:'FiraCode Nerd Font Propo',monospace;font-size:7.5pt;"><span style="color:#4898d9;font-weight:bold;font-style:italic;">https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js</span></pre></div> | AlpineJS      | v3.1.3  |             |
 | Script | defer, script | Internal, Absolute | <div style="color: rgb(223, 225, 243);"><pre style="font-family:'FiraCode Nerd Font Propo',monospace;font-size:7.5pt;"><span style="color:#4898d9;font-weight:bold;font-style:italic;">src/assets/js/app.js</span></pre></div>                                         | Local, Custom | TBC     |             |
 |        |               |                    |                                                                                                                                                                                                                                                                        |               |         |             |
-|        |               |                    |                                                                                                                                                                                                                                                                        |               |         |             |  
+|        |               |                    |                                                                                                                                                                                                                                                                        |               |         |             |
 
 
 ***
@@ -172,18 +172,18 @@ image: https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png
 * @license: .
 * @author: Charles J Fowler
 * @file: App.js
-* @copyright: Charles J Fowler 2023, 
+* @copyright: Charles J Fowler 2023,
 * @version: 0.0.1
 * {@link https://github.com/iPoetDev/AlpineTicTacToe|GitHub:AlpineTicTacToe} | [AlpineTicTacToe]{@link [https://github.com/iPoetDev/AlpineTicTacToe}
-*/ 
+*/
 ```
 
 #### Function
 
-- 
+-
 #### Function
 
-- 
+-
 #### Function
 
-- 
+-

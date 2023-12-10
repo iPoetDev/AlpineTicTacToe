@@ -3,10 +3,10 @@ module.exports = {
     content: {
         relative: true,
         files: [
-            './src/index.html', // main index file & entrypoint
-            './src/*.{html}',
-            './src/assets/css/*.{css}',
-            './src/assets/js/*.{html,js}',
+            'index.html', // main index file & entrypoint
+            './docs/*.{html}',
+            './docs/assets/css/*.{css}',
+            './docs/assets/js/*.{html,js}',
         ],
     },
     theme: {

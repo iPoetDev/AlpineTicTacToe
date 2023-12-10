@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-# `[DEFINE]()`: 
+# `[DEFINE]()`:
 > PROJECT | SOLUTION: Concept | Idea Capture | Discovery | Document Driven Effort
 
 - [ ] Ideation, Concept
@@ -26,8 +26,8 @@ assignees: ''
 ## Research
 > Sources
 
-- 
-- 
+-
+-
 
 ## Readme
 
@@ -36,7 +36,7 @@ assignees: ''
 - Notes:
 
 ## Proof
-> Grammar, Spelling, Diagram, 
+> Grammar, Spelling, Diagram,
 
 ## Editorial
 

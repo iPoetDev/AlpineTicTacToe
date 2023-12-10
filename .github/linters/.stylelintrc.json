@@ -1,0 +1,5 @@
+// https://github.com/super-linter/super-linter/blob/main/TEMPLATES/.stylelintrc.json
+
+{
+  "extends": "stylelint-config-standard"
+}

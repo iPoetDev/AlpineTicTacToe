@@ -4,11 +4,11 @@ pre-commit.ci:
   autoupdate_commit_msg: |
     chore [pre-commit.ci] pre-commit autoupdate
   autofix_prs: true
-  autoupdate_branch: epic-kore
+  autoupdate_branch: main
   autoupdate_schedule: monthly
   push:
     branches:
-      - epic-kore
+      - main
   skip:
     - editorconfig-checker
     - trailing-whitespace
@@ -18,7 +18,7 @@ pre-commit.ci:
   submodules: false
 fail_fast: false
 default_language_version:
-  python: python3.11
+  python: python3.12
 repos:
   - repo: local
     hooks:
@@ -32,56 +32,58 @@ repos:
     rev: v4.5.0
     hooks:
       - id: trailing-whitespace
-        exclude: ^staticfiles/admin/|^docs/
       - id: check-yaml
-        exclude: ^pep8speaks\.yml$
       - id: end-of-file-fixer
-        exclude: ^staticfiles/|^docs/
       - id: double-quote-string-fixer
       - id: detect-private-key
       - id: mixed-line-ending
       - id: no-commit-to-branch
         args: [--branch, main]
-  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.7.3
+#  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+#    rev: 2.7.3
+#    hooks:
+#      - id: editorconfig-checker
+#        alias: ec
+#  - repo: https://github.com/pre-commit/mirrors-prettier
+#    rev: ''  # Use the sha / tag you want to point at
+#    hooks:
+#      - id: prettier
+#        types_or: [ html, css, javascript ]
+#        additional_dependencies:
+#          - prettier@2.1.2
+  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
+    rev: '0.0.2' # Use the sha or tag you want to point at like 0.0.1
     hooks:
-      - id: editorconfig-checker
-        alias: ec
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.0
+      - id: stylelint
+        additional_dependencies:
+          - stylelint@16.0.1
+          - stylelint-config-standard@35.0.0
+          - stylelint-config-tailwindcss@0.0.7
+          - stylelint-config-recommended@14.0.0
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: 'v8.55.0'  # Use the sha / tag you want to point at
     hooks:
-      - id: ruff
-        args: [ --check]
-  - repo: https://github.com/jendrikseipp/vulture
-    rev: v2.10  # or any later Vulture version
+      - id: eslint
+        additional_dependencies:
+          - eslint@8.55.0
+          - eslint-standard@1.0.2
+  - repo: https://github.com/pre-commit/mirrors-jshint
+    rev: 'v2.13.6'  # Use the sha / tag you want to point at
     hooks:
-      - id: vulture
-        args: [--min-confidence, '80']
-  - repo: https://github.com/MarcoGorelli/absolufy-imports
-    rev: v0.3.1
+      - id: jshint
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.4
     hooks:
-      - id: absolufy-imports # archived, depreacted
-  - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.5
-    hooks:
-      - id: docformatter
-        # automatically formats docstrings: follows a subset of PEP 257
-        additional_dependencies: [ tomli ]
-        args: [ --in-place, --config, ./pyproject.toml ]
-  - repo: https://github.com/asottile/dead
-    rev: v1.5.2
-    hooks:
-      - id: dead
-        exclude: ^dash_and_do/settings.py|^docs/
+      - id: forbid-crlf
+      - id: remove-crlf
+      - id: forbid-tabs
+        exclude: \.md$
+      - id: remove-tabs
+        exclude: \.md$
+        args: [ --whitespaces-count, '2' ]  # defaults to: 4
 #  - repo: https://github.com/Yelp/detect-secrets
 #    rev: v1.0.3
 #    hooks:
 #      - id: detect-secrets
 #        args: ['--baseline', 'secrets.baseline']
 #        exclude: 'secrets.baseline'
-#  - repo: https://github.com/PyCQA/bandit
-#    rev: 1.7.5
-#    hooks:
-#      - id: bandit
-#        args: ["-r", "-lll"]
-#        exclude: *fixtures

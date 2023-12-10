@@ -7,10 +7,10 @@ assignees: iPoetDev
 
 ---
 
-# [`CHECK`] : 
+# [`CHECK`] :
 > - [ ] Pre-Commit
 > - [ ] Lint Report:
-> - [ ] Static Analysis: 
+> - [ ] Static Analysis:
 
 ## Command: **`         `**
 

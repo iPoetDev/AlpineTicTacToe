@@ -8,6 +8,9 @@
 Tic Tac Toe is a typical entry point for student developers to learning simple coding precepts and software development projects, hence it was chosen for this project. See the following goals in sections 1.1 Goals, 2.0 Solutions and 4.0 User Experience for goals and motivations. Additionally, it can get advanced with entry points into algorithm study via disciplines of Combinatorics and types of Artificial Intelligence algorithms; this is out of scope for this projects goals and learning outcomes.
 
 Source: https://en.wikipedia.org/wiki/Tic-tac-toe
+
+[![GitHub Super-Linter](https://github.com/iPoetDev/AlpineTicTacToe>/actions/workflows/super-linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 ### 1.1 Goals ✅
 > `Simple Goals, bullets points`
 #### 1.1.1 App Goals ✅
@@ -983,11 +986,11 @@ Refs:
 
 ###### 8.0.2.1 Design Patterns: Code Organisation ✅
   - <ins>**Separation of Concerns v Locality of Behaviour**</ins>
-    1. **Separation of Concerns**: HTML, CSS and Javascript are kept in separate, linked files is a traditional approach to code factoring and project structure organisation.
+    1. **Separation of Concerns**: HTML, CSS and JavaScript are kept in separate, linked files is a traditional approach to code factoring and project structure organisation.
         - Related code is groups together in a single file by (mime-)type.
         - Allows for code re-use and centralised maintenance.
-    3. **Locality of Behaviour**: The Locality of Behavior principle states that the behavior of code should be obvious
-       on inspection. Or more formally: The behavior of a unit of code should be as obvious as possible by looking only
+    3. **Locality of Behaviour**: The Locality of Behaviour principle states that the behaviour of code should be obvious
+       on inspection. Or more formally: The behaviour of a unit of code should be as obvious as possible by looking only
        at that unit of code.
         - .
         - .
@@ -1106,8 +1109,8 @@ Refs:
 ***
 ### 8.1 HTML ✅
 
-- **Version**: HTML5
-#### 8.1.1 Linting / Static Code Analysis ✅
+- `HTML5`: `v5.0`
+#### 8.1.1 Linting / Static Code Analysis: `htmlHint` ✅
 
 - The static code analysis tool you need for your HTML.
 - Rules: https://htmlhint.com/docs/user-guide/list-rules
@@ -1119,24 +1122,188 @@ Refs:
 - Uses NPM: https://www.npmjs.com/package/w3c-html-validator
 
 ***
-### 8.2 CSS 🚧
+### 8.2 CSS ✅
 
-#### 8.2.1 CSS Libraries & Frameworks 🚧
+#### 8.2.1 CSS Libraries & Frameworks ✅
 
-#### 8.2.2 Linting 🚧
+- Modern CSS: CSSv3 with latest Browser Supports.
+	- CanIUse: [Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/)
+		- provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers.
+		- Features: [Can I use... Features Index](https://caniuse.com/ciu/index)
+		- CanIUse.com for CSS: [Can I use... Support tables for CSS3, etc](https://caniuse.com/?cats=CSS&statuses=all)
+	- InterOp 2023: [web-platform-tests dashboard (wpt.fyi)](https://wpt.fyi/interop-2023)
 
-#### 8.2.3 HTML W3C Validation 🚧
+#### 8.2.2 Linting: `StyleLint` ✅
+
+- `StyleLint` `v15.11.0`:
+	- A mighty CSS linter that helps you avoid errors and enforce conventions.
+	- A linter and validator for CSS that is:
+		- complete - coverage of all standard CSS syntax.
+		- extensible - multiple points of extension.
+		- configurable - options to tailor the linter.
+		- robust - comprehensive test coverage.
+		- consistent - conventions for behaviour, naming and documentation.
+		- performant - tools to test and improve performance
+	- Provide multiple points of extensions, including:
+		- [custom syntaxes](https://stylelint.io/developer-guide/syntaxes) - use any PostCSS-compatible syntax to support other CSS-like languages and containers
+		- [extendable configs](https://stylelint.io/user-guide/configure#extends) - extend and share configurations
+		- [formatters](https://stylelint.io/developer-guide/formatters) - format Stylelint result objects
+		- [plugins](https://stylelint.io/developer-guide/plugins) - build custom rules to support methodologies, toolsets, non-standard CSS features,
+	- *Web*: [Home | Stylelint](https://stylelint.io/)
+	- *GitHub*: [stylelint/stylelint: A mighty CSS linter that helps you avoid errors and enforce conventions. (github.com)](https://github.com/stylelint/stylelint)
+	- *NPM*: [stylelint - npm (npmjs.com)](https://www.npmjs.com/package/stylelint)
+
+#### 8.2.3 CSS W3C Validation ✅
+
+*- W3C CSS* compatibility for *W3C JigSaw*: [Cascading Style Sheets (w3.org)](https://www.w3.org/Style/CSS/)
+	- [So, this is the authority on what is correct CSS and what isn't? (w3.org)](https://jigsaw.w3.org/css-validator/about.html#reference):
+		- **No**. It is a helpful and reliable tool, but a software tool.
+		- The actual reference on Cascading Style Sheets are the [CSS Specifications](http://www.w3.org/Style/CSS/#specs).
+	- This tool is largely out of date, and documentation on their [About the W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/about.html) has references to 2.1.
+		- Useful for learning purposes, however there are features in *ModernCSS* (*InterOp 2023*, between browser vendors) that are see as errors in *W3C JigSaw*.
 
 ***
 ### 8.3 JavaScript 🚧
 
-#### 8.3.1 JS Libraries & Frameworks 🚧
+#### 8.3.1 JS Libraries & Frameworks ✅
 
-#### 8.3.2 JS Linting 🚧
+- `JavaScript` `vEC6`: *ECMAScrip 2015* - *ECMAScript 2020*.
+	- MDN: [JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/javascript)
+	- W3CSchools: [JavaScript Versions (w3schools.com)](https://www.w3schools.com/Js/js_versions.asp)
+
+- `AlpineJS`: `v3.13`
+	- A rugged, minimal framework for composing JavaScript behavior in your markup (applying a Locality of Behaviour design pattern).
+	- **Alpine** is a rugged, minimal tool for composing behavior directly in your markup
+		- [Intro to Alpine.js: A JavaScript framework for minimalists | InfoWorld](https://www.infoworld.com/article/3682135/intro-to-alpinejs-a-javascript-framework-for-minimalists.html)
+	- Used for UI/HTML Components for Interactive web applications.
+	- Web: https://alpinejs.dev/: Used references.
+		- [Events — Alpine.js (alpinejs.dev)](https://alpinejs.dev/essentials/events)
+		- [Reactivity — Alpine.js (alpinejs.dev)](https://alpinejs.dev/advanced/reactivity):
+		- Directives:
+			- [x-data — Alpine.js (alpinejs.dev)](https://alpinejs.dev/directives/data)
+			- [x-on (alpinejs.dev)](https://alpinejs.dev/directives/on)
+			- [x-for (alpinejs.dev)](https://alpinejs.dev/directives/for)
+			- [x-text (alpinejs.dev)](https://alpinejs.dev/directives/text)
+			- [x-show (alpinejs.dev)](https://alpinejs.dev/directives/show)
+			- [x-transition (alpinejs.dev)](https://alpinejs.dev/directives/transition)
+		- Magics:
+			- [nextTick — Alpine.js (alpinejs.dev)](https://alpinejs.dev/magics/nextTick)
+	- GitHub: [alpinejs/alpine: A rugged, minimal framework for composing JavaScript behavior in your markup. (github.com)](https://github.com/alpinejs/alpine)
+	- NPM: [alpinejs - npm (npmjs.com)](https://www.npmjs.com/package/alpinejs)
+#### 8.3.2 JS Linting ✅
+
+> Read More: [4 options to help you get started linting your JavaScript - LogRocket Blog](https://blog.logrocket.com/four-options-to-help-you-get-started-linting-your-javascript-b4b829828648/)
+
+- `esLint`: `v8.55.0`
+- `standardJS`: `v`
+- `JsHint`: `v2.13.6`
+#### 8.3.3 JS Interactions: AlpineJS 🚧
+
+- A browser extension for [AlpineJS DevTools: is installed for Debbuging/Observability](https://chromewebstore.google.com/detail/alpinejs-devtools/fopaemeedckajflibkpifppcankfmbhk).
+	- DevTools extension for debugging Alpine.js applications.
+	- It allows you to detect, inspect and edit Alpine.js data and components in the Chrome Developer Tools.
+	- To can inspect and edit its current data in the panel to the right.
+-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- **Game App**: The initiating Function `gameApp()` instantiated the class `App()` internally and returns the `game` object.
+	- **Game Init**: The *AlpineJS* `x-data` directive initialises a HTML Component for the windows global variable `game`, which assigns and calls `gameApp()` initiating function.
+		- **`x-data` directive**: defines a chunk of *HTML* as an *AlpineJS* component and provides the reactive data for that component to reference.
+			- See [x-data — Alpine.js](https://alpinejs.dev/directives/data)
+		- **Scope**: Properties defined in an `x-data` directive are available to all element children.
+		- **Method**: As `x-data` is evaluated as a normal JavaScript object, in addition to state, you can store methods and even getters.
+- **Game Board**:
+	- The game board is divided into three sections in the grid (each section corresponds to a row in a 3×3 Tic Tac Toe game).
+		- 3 document fragments as HTML Templates are use for each row of the grid.
+	- It's where users can make their moves.
+	- Each section uses [HTML Template ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) tags (as a document fragment) as well as JavaScript's template literals,
+		- [`<template>`: The Content Template element - HTML: HyperText Markup Language | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
+	- **Game Board's Rows**:
+		- An *AlpineJS* `x-for` directive is used for looping and it creates three (`<div>` containing `<button>)` in each row;
+			- See [x-for — Alpine.js](https://alpinejs.dev/directives/for)
+			- When called, the `for loop` dynamically creates a copy of the template document fragment's div; up to 3 times .
+			- The output these iterations is a grid cell within the row.
+			- Each loop iterates for the following from the `game.grid` and takes a `grid.slice()` function per row.
+				- An `index`: The index of each grid being clicked upon.
+				- An `item`: The content of each grid's cell.
+				- A `slice` of the grid helps generate the cells in each row.
+					- [Array.prototype.slice() - JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+					- *Row 1*: `slice(0,3)`
+					- *Row 2*: `slice(3,6)`
+					- *Row 3*: `slice(6,9)`
+	- **Game Grid's Button Click (Event) Handler**:
+		- Each button (`<button>` tags inside `<div>` tags) has an `@click` event listener which invokes `game.select(index)`, a public methods of the game's `App` class.
+		- This function handles the game's logic on each click for user interactivity.
+		- The `@` symbol in `@click` is *AlpineJS* shorthand and equivalent of the `x-on:click` *AlpineJS* directive for **event handling.**
+			- See [Events — Alpine.js](https://alpinejs.dev/essentials/events)
+			- Listen for simple browser events that are dispatched on or within an element.
+		- The `@click.prevent` is the *AlpineJS* implementation of the [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) event method (i.e. `event.preventDefault()`).
+			- When reacting to browser events, it is often necessary to "*prevent default*" (prevent the default behaviour of the browser event).
+				- See [AlpineJS Docs: Preventing Default](https://alpinejs.dev/essentials/events#preventing-default "Preventing default (alpinejs.dev)")
+				- In this context: this prevents the click event handler from being fired on the `x-for` loop when the Game Board's button is generated from the document fragment and to await for the user click ( *Editor: I think*).
+			-  `preventDefault` - tells the [user agent](https://developer.mozilla.org/en-US/docs/Glossary/User_agent) that if the event does not get explicitly handled and its default action should not be taken as it normally would be.
+	- **Game Grid's Content as the Token**: The *AlpineJS* `x-text` directive to display the value of the `select`ed grid (by `index` on an `click` event) in the grid's array and is assigned to the game.grid's index.
+		- See [x-text — Alpine.js](https://alpinejs.dev/directives/text)
+		- Each button has an assigned *variable* called `item`.
+		- The value of the `item` is the game's token, either `X` or `O`.
+	- **Game Grid's Token Show/Hide**: The *AlpineJS* `x-show` directive provides an expressive way to show / hide DOM elements.
+		- See [x-show — Alpine.js](https://alpinejs.dev/directives/show)
+		- Each button's default content state is null and thus hidden.
+		- Shows the `item`, i.e. the Game Token, when the `item` is `not null`, or when played (i.e. when a button is clicked).
+	- **Game Grid's Token Animation**: The *AlpineJS* `x-transition` directive, and is nominally used in conjunction with `x-show`, to provide robust smooth transitions when an element is shown/hidden.
+		- See [x-transition — Alpine.js](https://alpinejs.dev/directives/transition)
+		- Applies pleasant transition to fade/scale the revealing element by default.
+		- Conditional directives control the state of the transition and animations:
+			- `x-transition:enter` gives the default initial enter state when the event initialises, and applies the CSS to ease out over `300ms` i.e `transition ease-out duration-300`.
+			- `x-transition:enter-start` gives the enter-start state, and applies the CSS of opacity of `Zero/0` and a `50% scale`. i.e. `opacity-0 transform scale-50`.
+			- `x-transition:enter-end` gives the enter-end state, and applies the CSS of opacity of `100`, transforming the scale to 100%. i.e. `opacity-0 transform scale-50`.
+
+#### 8.3.4 JS API: Custom Logic 🚧
+> Move to a API.md or define in a JSDoc format
+##### class App
+
+- **Properties (Get/Set)**: *get|set, return type*
+	- *get, {string}* `P1()` - returns "`X`" token.
+	- *get, {string}* `P2()` - returns "`O`" token.
+	- *get, {string}* `X_TURNS_PROP()` - returns "`xTurn`".
+	- *get, {string}* `O_TURNS_PROP()` - returns "`oTurn`".
+	- *get, {integer}* `MAX_LENGTH()` - returns `9` : Max length of grid array.
+- **Methods**: *scope, return type*
+	- *{void}* `constructor()`
+		- *{string}* `this.turns`:
+		- *{boolean}* `this.won`:
+		- *{Array()}* `this.winSeq`:
+		- *{Proxy(Array())* `this.grid`: Alpine.reactive() array
+		- *{Proxy(string)}* `this.xChars`: Alpine.reactive() array
+		- *{Proxy(string)}* `this.oChars`: Alpine.reactive() array
+		- *{string}* `this.xTurns`:
+		- *{string}* `this.oTurns`:
+	- *private, {array}* `_getRandonCharacter(characterArray)`
+		- *{array}* `characterArray`:
+		- **return, array**: new `characterArray`
+	- *private, {void}*  `_updateTurnsAndGrid(index, characterArray, turnProperty)`
+		- *{integer}* `index`: The indices of the grid from event handler, on-click.
+		- *{array}* `characterArray`: assigns: `this.xChars` | `this.oChars`
+		- *{string}* `turnProperty`: assigns: `this.xTurns` | `this.oTurns`
+	- *private, {boolean}* `_isInvalidMove(index)`
+		- *{integer}* `index`: The indices of the grid from event handler, on-click.
+		- **return, boolean**: `true` | `false`
+	- *private, {void}* `_isEvenTurn(index)`
+		- *{integer}* `index`: The indices of the grid from event handler, on-click.
+	- *public, {string}* `select(index)`
+		- *{integer}* `index`: The indices of the grid from event handler, on-click.
+		- **return,string**: `this.grid[index]`;
+	- *private, {boolean}* `_checkSequenceWin(turns, sequence)`
+		- *{string}* `turns`: assigns: `this.xTurns` | `this.oTurns`
+		- *{string}* `sequence`:
+		- **returns, boolean**: `regExp.test(filteredTurns);`
+	- *public, {boolean}* `checkWinner()`
+		- **returns, string**: `this.won`
+	- *public, {void}* `reset()`
+
 
 ***
 ### 8.4 Static Analysis
 > Linting | Pre-Commit.
+
 
 
 ***
